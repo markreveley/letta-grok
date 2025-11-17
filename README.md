@@ -20,7 +20,16 @@ Letta is the platform for building stateful agents: open AI with advanced memory
 ```
 letta-grok/
 ├── README.md                          # This file - quick overview
-├── ARCHITECTURE_ANALYSIS.md           # Comprehensive 13-section architecture analysis
+├── analysis/                          # Detailed analysis documents
+│   ├── ARCHITECTURE_ANALYSIS.md      # Comprehensive 13-section overview
+│   ├── QUICK_REFERENCE.md            # Developer fast-lookup guide
+│   ├── agent-execution.md            # Deep dive: Agent execution system
+│   ├── memory-management.md          # Deep dive: Memory hierarchy
+│   ├── tool-system.md                # Deep dive: Tool execution
+│   ├── api-layer.md                  # Deep dive: REST API
+│   ├── database-orm.md               # Deep dive: Database layer
+│   ├── llm-integration.md            # Deep dive: LLM providers
+│   └── streaming-system.md           # Deep dive: Streaming architecture
 └── letta-repo/                        # Cloned Letta source code
     ├── letta/                         # Main Python package
     ├── tests/                         # Test suite
@@ -30,7 +39,7 @@ letta-grok/
 
 ## Documentation
 
-### [📖 Read the Complete Architecture Analysis](./ARCHITECTURE_ANALYSIS.md)
+### [📖 Read the Complete Architecture Analysis](./analysis/ARCHITECTURE_ANALYSIS.md)
 
 The comprehensive analysis document covers:
 
@@ -170,24 +179,27 @@ response = client.agents.messages.create(
 Depending on your interest, start exploring:
 
 ### For Application Developers
-- Review SDK examples in `letta-repo/examples/`
-- Check REST API endpoints in the analysis (Section 6)
-- Understand memory blocks and agent creation (Section 2)
+- **Start here**: [Quick Reference Guide](./analysis/QUICK_REFERENCE.md)
+- **Deep dive**: [API Layer Analysis](./analysis/api-layer.md) - REST endpoints with code references
+- **Memory usage**: [Memory Management](./analysis/memory-management.md) - How to use memory blocks
+- **Examples**: Review SDK examples in `letta-repo/examples/`
 
 ### For Contributors
-- Study the service manager pattern (Section 4)
-- Explore the agent execution pipeline (Section 5)
-- Review the database ORM models in `letta-repo/letta/orm/`
+- **Start here**: [Architecture Analysis](./analysis/ARCHITECTURE_ANALYSIS.md)
+- **Deep dive**: [Agent Execution](./analysis/agent-execution.md) - Complete agent lifecycle with line numbers
+- **Database**: [Database/ORM Layer](./analysis/database-orm.md) - Schema and migrations
+- **Code**: Review the database ORM models in `letta-repo/letta/orm/`
 
 ### For System Architects
-- Analyze the multi-layer architecture (Section 1-2)
-- Study scaling considerations (Section 10)
-- Review observability setup (Section 11)
+- **Start here**: [Architecture Analysis](./analysis/ARCHITECTURE_ANALYSIS.md)
+- **Deep dive**: [Streaming System](./analysis/streaming-system.md) - Real-time architecture
+- **Integration**: [LLM Integration](./analysis/llm-integration.md) - Multi-provider support
+- **APIs**: [API Layer Analysis](./analysis/api-layer.md) - Endpoint design
 
 ### For AI/ML Engineers
-- Understand the memory hierarchy (Section 8.1)
-- Study LLM provider integration (Section 2.5)
-- Explore tool execution sandboxing (Section 4.5)
+- **Memory**: [Memory Management Deep Dive](./analysis/memory-management.md) - Hierarchical memory with code
+- **LLMs**: [LLM Integration Analysis](./analysis/llm-integration.md) - Provider implementations
+- **Tools**: [Tool System Analysis](./analysis/tool-system.md) - Function calling and execution
 
 ## Resources
 
@@ -201,8 +213,10 @@ Depending on your interest, start exploring:
 This analysis is maintained as part of understanding the Letta architecture. If you find inaccuracies or want to add sections:
 
 1. Review the cloned source in `letta-repo/`
-2. Update `ARCHITECTURE_ANALYSIS.md`
+2. Update relevant files in `analysis/` folder
 3. Submit improvements via pull request
+
+All analysis documents include direct links to source code files with line numbers for easy navigation.
 
 ## License
 
