@@ -20,7 +20,14 @@ Letta is the platform for building stateful agents: open AI with advanced memory
 ```
 letta-grok/
 ├── README.md                          # This file - quick overview
-├── analysis/                          # Detailed analysis documents
+├── concepts/                          # 💡 Core concepts explained
+│   ├── 01-stateful-agents.md         # What are stateful agents?
+│   ├── 02-context-window.md          # Understanding LLM limits
+│   ├── 03-memory-hierarchy.md        # Memory organization
+│   ├── 04-memory-blocks.md           # Editable memory sections
+│   ├── 07-tool-calling.md            # How agents use tools
+│   └── ...                           # More concepts
+├── analysis/                          # 📊 Detailed technical analysis
 │   ├── ARCHITECTURE_ANALYSIS.md      # Comprehensive 13-section overview
 │   ├── QUICK_REFERENCE.md            # Developer fast-lookup guide
 │   ├── agent-execution.md            # Deep dive: Agent execution system
@@ -38,6 +45,14 @@ letta-grok/
 ```
 
 ## Documentation
+
+### [💡 Start with Core Concepts](./concepts/README.md)
+**New to Letta?** Start here! Learn the fundamental ideas behind Letta:
+- [Stateful Agents](./concepts/01-stateful-agents.md) - What makes agents "stateful"
+- [Context Window](./concepts/02-context-window.md) - Understanding LLM constraints
+- [Memory Hierarchy](./concepts/03-memory-hierarchy.md) - How Letta manages memory
+- [Memory Blocks](./concepts/04-memory-blocks.md) - Editable memory sections
+- [Tool Calling](./concepts/07-tool-calling.md) - How agents use tools
 
 ### [📖 Read the Complete Architecture Analysis](./analysis/ARCHITECTURE_ANALYSIS.md)
 
